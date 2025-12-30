@@ -18,7 +18,7 @@ class WeatherModel{
 
  });
    factory WeatherModel.fromJson(dynamic data){
-       final jsonData =data["forecast"]["forecastday"][0]["date"];
+       final jsonData =data["forecast"]["forecastday"][0]["day"];
          return WeatherModel(
           time:DateTime.parse(data["current"]["last_updated"]),
            weatherStateName: jsonData["condition"]["text"],
